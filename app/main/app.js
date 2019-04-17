@@ -1,6 +1,6 @@
 'use strict';
-var myApp = angular.module('billpay', [
-	'ui.router',
+const myApp = angular.module('billpay', [
+    'ui.router',
     'app.controllers',
     'app.directives',
     'app.filters',
@@ -8,11 +8,11 @@ var myApp = angular.module('billpay', [
     'ui.router.state.events',
     'ngResource',
     'app.factories',
-    'app.services'
+    'app.services',
+    'ngAnimate'
 ]);
 angular.module('app.controllers', []);
 angular.module('app.services', []);
 angular.module('app.factories', []);
 angular.module('app.directives', []);
 angular.module('app.filters', []);
- 

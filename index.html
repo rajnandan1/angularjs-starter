@@ -2,63 +2,69 @@
 <html lang="en" ng-app="billpay">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content=" ">
-    <meta name="keywords" content="">
-    <title>AngularJS Started By Xurple</title>
-    <link rel="stylesheet" type="text/css" href="app/style/pure/base-min.css">
-    <!-- Lib Angular JS File -->
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/ngstorage/ngStorage.min.js"></script>
-    <script src="lib/angular/angular-ui-router.min.js"></script>
-    <script src="lib/angular/angular-resource.js"></script>
-    <script src="lib/angular/stateEvents.js"></script>
-    <link rel="stylesheet" type="text/css" href="app/style/cf-custom.css">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content=" ">
+   <meta name="keywords" content="">
+   <title>AngularJS Started By Xurple</title>
+   <link rel="stylesheet" type="text/css" href="app/style/pure/base-min.css">
+   <!-- Lib Angular JS File -->
+   <script src="lib/angular/angular.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="app/style/cf-custom.css">
+   <link rel="stylesheet" type="text/css" href="app/style/page-animate.css">
+   <base href="/">
 </head>
 
-<body>
-    <div ui-view=""></div>
+<body class="" ng-class="{'view-forward':$root.direction == 'f', 'view-back':$root.direction == 'b'}">
+   <div ui-view="" ng-cloak></div>
 
-    <!-- Main App Files -->
-    <script src="app/main/app.js"></script>
-    <script src="app/main/state.js"></script>
-    <script src="app/main/run.js"></script>
-    <script src="app/main/config.js"></script>
+   <!-- Main App Files -->
+   <script src="app/main/app.js"></script>
+   <script src="app/main/state.js"></script>
+   <script src="app/main/run.js"></script>
+   <script src="app/main/config.js"></script>
 
-    <!-- Controllers Files -->
-    <script src="app/controllers/ViewOneCtrl.js"></script>
-    <script src="app/controllers/ViewTwoCtrl.js"></script>
+   <!-- Controllers Files -->
+   <script src="app/controllers/ViewOneCtrl.js"></script>
+   <script src="app/controllers/ViewTwoCtrl.js"></script>
 
-    <!-- Services Files -->
-    <script src="app/services/service.js"></script>
+   <!-- Services Files -->
+   <script src="app/services/service.js"></script>
 
-    <!-- Factories Files -->
-    <script src="app/factories/factory.js"></script>
+   <!-- Factories Files -->
+   <script src="app/factories/factory.js"></script>
 
-    <!-- Directives Files -->
-    <script src="app/directives/directive.js"></script>
+   <!-- Directives Files -->
+   <script src="app/directives/directive.js"></script>
 
-    <!-- Filters Files -->
-    <script src="app/filters/filter.js"></script>
+   <!-- Filters Files -->
+   <script src="app/filters/filter.js"></script>
 
-    <!-- Providers Files -->
-    <script src="app/providers/provider.js"></script>
-    <script>
-        myApp.provider('globalsetting', function() {
-            var appname = "LAWYER APP";
-            this.setAppName = function(value) {
-                appname = value;
-            }
-            this.$get = function() {
-                return {
-                    appName: appname,
-                    apiServer: "https://jsonplaceholder.typicode.com"
-                };
-            }
-        });
+   <!-- Providers Files -->
+   <script src="app/providers/provider.js"></script>
 
-    </script>
+   <!-- Libraries -->
+   <script src="lib/ngstorage/ngStorage.min.js"></script>
+   <script src="lib/angular/angular-ui-router.min.js"></script>
+   <script src="lib/angular/angular-resource.js"></script>
+   <script src="lib/angular/stateEvents.js"></script>
+   <script src="lib/angular/angular-animate.min.js"></script>
+
+   <script>
+      myApp.provider('globalsetting', function() {
+         var appname = "LAWYER APP";
+         this.setAppName = function(value) {
+            appname = value;
+         }
+         this.$get = function() {
+            return {
+               appName: appname,
+               apiServer: "https://jsonplaceholder.typicode.com"
+            };
+         }
+      });
+   </script>
 </body>
 
 </html>
