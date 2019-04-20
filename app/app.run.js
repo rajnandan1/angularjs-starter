@@ -4,9 +4,9 @@ myApp.run(function($localStorage, globalsetting, $rootScope, $timeout) {
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, error) {
         var toLevel = toState.level || 0;
-         
+
         if (fromState.level !== undefined) {
-            
+
             var fromLevel = fromState.level;
 
             if (fromLevel < toLevel) {
@@ -17,7 +17,14 @@ myApp.run(function($localStorage, globalsetting, $rootScope, $timeout) {
             }
         }
 
+        H5_loading.show();
+
     });
-}).controller("AppController",function($scope){
+
+    $rootScope.$on('$viewContentLoaded', function(event) {
+        H5_loading.hide();
+    });
+
+}).controller("AppController", function($scope) {
     //alert("Main Controller")
 });

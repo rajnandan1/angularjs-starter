@@ -2,37 +2,42 @@
 <html lang="en" ng-app="billpay" ng-controller="AppController">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content=" ">
-    <meta name="keywords" content="">
-    <title>AngularJS Started By Xurple</title>
-    <link rel="stylesheet" type="text/css" href="style/pure/base-min.css">
-    <!-- Lib Angular JS File -->
-    <script src="lib/angular/angular.js"></script>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content=" ">
+   <meta name="keywords" content="">
+   <title>AngularJS Started By Xurple</title>
+   <link rel="stylesheet" type="text/css" href="style/pure/base-min.css">
+   <!-- Lib Angular JS File -->
+   <script src="lib/angular/angular.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="style/cf-custom.css">
-    <link rel="stylesheet" type="text/css" href="style/page-animate.css">
-    <base href="/">
+   <link rel="stylesheet" type="text/css" href="style/cf-custom.css">
+   <link rel="stylesheet" type="text/css" href="style/page-animate.css">
+   <link rel="stylesheet" type="text/css" href="lib/H5_loading/H5_loading.css">
+   <script type="text/javascript" src="lib/H5_loading/H5_loading.js"></script>
+   <base href="/">
+   <script type="text/javascript">
+      H5_loading.show();
+   </script>
 </head>
 
 <body class="" ng-class="{'view-forward':$root.direction == 'f', 'view-back':$root.direction == 'b'}">
-    <div ui-view="" ng-cloak></div>
+   <div ui-view="" ng-cloak></div>
+   <!-- Main App Files -->
+   <script src="app/app.js"></script>
+   <script src="app/app.config.js"></script>
+   <script src="app/app.run.js"></script>
+   <script src="app/app.state.js"></script>
 
-    <!-- Main App Files -->
-    <script src="app/app.js"></script>
-    <script src="app/app.config.js"></script>
-    <script src="app/app.run.js"></script>
-    <script src="app/app.state.js"></script>
 
+   <!-- Libraries -->
+   <script src="lib/ngstorage/ngStorage.min.js"></script>
+   <script src="lib/angular/angular-ui-router.min.js"></script>
+   <script src="lib/angular/angular-resource.js"></script>
+   <script src="lib/angular/stateEvents.js"></script>
+   <script src="lib/angular/angular-animate.min.js"></script>
+   <script src="lib/ocLazyLoad-master/dist/ocLazyLoad.min.js"></script>
 
-    <!-- Libraries -->
-    <script src="lib/ngstorage/ngStorage.min.js"></script>
-    <script src="lib/angular/angular-ui-router.min.js"></script>
-    <script src="lib/angular/angular-resource.js"></script>
-    <script src="lib/angular/stateEvents.js"></script>
-    <script src="lib/angular/angular-animate.min.js"></script>
-    <script src="lib/ocLazyLoad-master/dist/ocLazyLoad.min.js"></script>
 
 </body>
 
