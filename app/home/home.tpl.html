@@ -2,8 +2,8 @@
 <h2>Set up {{status}}</h2>
 <p>This is a single</p>
 <p>
-    <a ui-sref="abstract.first">Go to abstract view</a>
-    <a ui-sref="profile">Profile</a>
+   <a ui-sref="abstract.first">Go to abstract view</a>
+   <a ui-sref="profile">Profile</a>
 </p>
 <h4>Directive</h4>
 <custom-directive></custom-directive>
@@ -17,3 +17,5 @@ New Value : {{firstV | customFilter}}
 {{customFactoryText}}
 <h4>Custom Service</h4>
 {{customServiceText}}
+<h4>Input tooltip</h4>
+<input type="text" name="" value="" tooltip-show-trigger="focusin" tooltip-side="bottom" tooltip-hide-trigger="focusout" tooltips tooltip-template="I am tool tip">

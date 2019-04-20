@@ -4,7 +4,6 @@ const myApp = angular.module('billpay', [
     'app.controllers',
     'app.directives',
     'app.filters',
-    'ngStorage',
     'ui.router.state.events',
     'ngResource',
     'app.factories',
@@ -18,7 +17,7 @@ angular.module('app.factories', []);
 angular.module('app.directives', []);
 angular.module('app.filters', []);
 
-angular.module('app.home', []);
+angular.module('app.home', ['720kb.tooltips']);
 angular.module('app.profile', []);
 
 angular.module('app.abstract', []);

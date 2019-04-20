@@ -1,6 +1,5 @@
-myApp.run(function($localStorage, globalsetting, $rootScope, $timeout) {
-    console.log("app run");
-    $localStorage.appname = globalsetting.appName;
+myApp.run(function(globalsetting, $rootScope, $timeout) {
+
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, error) {
         var toLevel = toState.level || 0;
